@@ -1,7 +1,7 @@
 package in.ac.charusat.studentmgmtsystem.repository;
 
-import in.ac.charusat.studentmgmtsystem.model.Student;
+import in.ac.charusat.studentmgmtsystem.model.Student20IT062;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StudentRepository extends JpaRepository<Student, Integer> {
+public interface StudentRepository extends JpaRepository<Student20IT062, Integer> {
 }

@@ -1,14 +1,11 @@
 package in.ac.charusat.studentmgmtsystem.controller;
 
-import in.ac.charusat.studentmgmtsystem.model.Student;
+import in.ac.charusat.studentmgmtsystem.model.Student20IT062;
 import in.ac.charusat.studentmgmtsystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class StudentController {
@@ -26,37 +23,37 @@ public class StudentController {
     // Mappings - URL endpoints
     // Get the list of all student
     @GetMapping("/listStudents")
-    public List<Student> getAllStudents() {
+    public List<Student20IT062> getAllStudents() {
         return studentRepository.findAll();
     }
 
     // Get the student information
     @GetMapping("/student/{id}")
-    public Student getStudent(@PathVariable Integer id) {
+    public Student20IT062 getStudent(@PathVariable Integer id) {
         return studentRepository.findById(id).get();
     }
 
     // Delete the student
     @DeleteMapping("/student/{id}")
-    public List<Student> deleteStudent(@PathVariable Integer id) {
+    public List<Student20IT062> deleteStudent(@PathVariable Integer id) {
         studentRepository.delete(studentRepository.findById(id).get());
         return studentRepository.findAll();
     }
 
     // Add new student
     @PostMapping("/student")
-    public List<Student> addStudent(@RequestBody Student student) {
-        studentRepository.save(student);
+    public List<Student20IT062> addStudent(@RequestBody Student20IT062 student20IT062) {
+        studentRepository.save(student20IT062);
         return studentRepository.findAll();
     }
 
     // Update the student information
     @PutMapping("/student/{id}")
-    public List<Student> updateStudent(@RequestBody Student student, @PathVariable Integer id) {
-        Student studentObj = studentRepository.findById(id).get();
-        studentObj.setName(student.getName());
-        studentObj.setAddress(student.getAddress());
-        studentRepository.save(studentObj);
+    public List<Student20IT062> updateStudent(@RequestBody Student20IT062 student20IT062, @PathVariable Integer id) {
+        Student20IT062 student20IT062Obj = studentRepository.findById(id).get();
+        student20IT062Obj.setName(student20IT062.getName());
+        student20IT062Obj.setAddress(student20IT062.getAddress());
+        studentRepository.save(student20IT062Obj);
         return studentRepository.findAll();
     }
 

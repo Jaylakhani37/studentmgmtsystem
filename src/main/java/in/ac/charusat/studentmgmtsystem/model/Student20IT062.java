@@ -4,20 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Student {
+public class Student20IT062 {
 
     @Id
     private Integer id;
     private String name;
     private String address;
 
-    public Student(Integer id, String name, String address) {
+    public Student20IT062(Integer id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
     }
 
-    public Student() {
+    public Student20IT062() {
 
     }
 
